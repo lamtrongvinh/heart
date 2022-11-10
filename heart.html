@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js"></script>
+
+  </head>
+
+  <body>
+    
+    <div class="pinkboard">
+      <canvas id="pinkboard"></canvas>
+    </div>
+
+    <div id="drag-container">
+
+      <div id="spin-container">
+
+        <img
+
+          src="/img/img.jpg"
+
+          alt=""
+
+        />
+
+        <img
+
+          src="/img/img2.jpg"
+
+          alt=""
+
+        />
+
+        <img
+
+          src="/img/img3.jpg"
+
+          alt=""
+
+        />
+
+        <img
+
+          src="/img/img4.jpg"
+
+          alt=""
+
+        />
+
+        <img
+
+          src="/img/img5.jpg"
+          alt=""
+
+        />
+
+        <img
+
+          src="/img/img6.jpg"
+
+          alt=""
+
+        />
+
+
+        <!-- Example add video  -->
+
+       
+
+      </div>
+
+      <div id="ground"></div>
+
+    </div>
+
+
+    <div id="music-container">
+
+      <iframe
+
+        src="https://www.youtube.com/embed/yrAlRngYndg?autoplay=1"
+
+        class="frame"
+
+        allowfullscreen
+
+        frameborder="0"
+
+        width="420"
+
+        height="345"
+
+        allow="autoplay"
+
+      ></iframe>
+
+    </div>
+
+  </body>
+
+  <script src="setting.js" type="text/javascript">
+    document.addEventListener("mousemove", function (e) {
+      var body = document.querySelector('pinkboard');
+      var heart = document.createElement("span");
+      var x = e.offsetX;
+      var y = e.offsetY;
+      heart.style.left = x + 'px';
+      heart.style.top = y + 'px';
+      var size = Math.random() * 100;
+      heart.style.width = size + 'px';
+      heart.style.height = size + 'px';
+      body.appendChild(heart);
+  })
+  </script>
+
+</html>
